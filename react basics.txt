@@ -1,0 +1,4 @@
+everthing is a component
+jsx: output js variables, perform js logic in the code using {}
+App() a statless react component
+components must always retur exactly ONE html element, wrapping all the other elemnts oc

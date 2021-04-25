@@ -1,0 +1,61 @@
+.main-comp{
+  position: relative;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+.flex {
+  display:flex;
+  justify-content: space-between;
+}
+
+.Cont {
+  /* max-width: 1000px;
+  margin: 2rem auto;
+  padding: 2rem; */
+  margin: 5vw 10vw;
+  padding: 5vw;
+  border: rgb(53, 53, 53) 1px solid ;
+}
+
+.logo{
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+}
+.logo:before{
+  content: "";
+  position: absolute;
+  background-color: rgb(185, 14, 14);
+  left: 0.04em;
+  top: 0.17em;
+  width: 1.25em;
+  height: 0.22em;
+}
+.nav{
+  margin-right: 2vw;
+}
+.app-header{
+  font-weight: bold;
+  border-bottom: 2px solid rgb(26, 5, 5);
+  padding: 1rem;
+  background-color: rgba(6, 9, 39, 0.609);
+  color: white;
+  margin-top: 0;
+  width: 100%;
+}
+
+.foot{
+  border-top: 2px solid rgb(26, 5, 5);
+  padding: 1rem;
+  font-weight: bold;
+  position: absolute;
+  background-color: rgba(6, 9, 39, 0.609);
+  color: white;
+  margin: 0;
+  bottom: 0;
+  width: 100%;
+  display: grid;
+  place-content: center;
+  
+}
