@@ -1,17 +1,41 @@
 import './App.css';
 import Header from './comp/Header'
-import Hello from './comp/Hello';
-import Counter from './comp/Counter';
 import FooterC from './comp/Footer';
 import Container from './comp/Container';
+import React from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from 'react-router-dom';
 
-//*jsx: output js variables, perform js logic in the code using {}
+
 function App() {
+  const [width, setWidth] = React.useState(window.innerWidth);
+  const [height, setHeight] = React.useState(window.innerHeight);
+  const updateWidthHeight = () => {
+    setWidth(window.innerWidth);
+    setHeight(window.innerHeight);
+  }
+  React.useEffect(() => {
+    window.addEventListener('resize', updateWidthHeight);
+    return () => window.removeEventListener('resize', updateWidthHeight);
+  })
   return (
     <div className="main-comp">
-      <Header/>
-        <Container></Container>
-      <FooterC/>
+      <Router>
+        <Header />
+        <Switch>
+          <Route exact path="/">
+            <Container page='home'></Container>
+          </Route>
+          <Route path="/about">
+            <Container page='about'></Container>
+          </Route>
+        </Switch>
+        <FooterC />
+      </Router>
     </div>
   );
 }

@@ -5,7 +5,7 @@ import React from "react";
 
 function Hello(props) {
    return (
-       <h2>Hello {props.name}</h2>
+       <h2>{props.greeting}{props.name}</h2>
    )
 }
 

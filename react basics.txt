@@ -2,3 +2,9 @@ everthing is a component
 jsx: output js variables, perform js logic in the code using {}
 App() a statless react component
 components must always retur exactly ONE html element, wrapping all the other elemnts oc
+
+props: 
+	if the component accepts props as an argument, in the jsx the prop can be accessed insde curly braces in the html elemnt
+
+hooks:
+	S

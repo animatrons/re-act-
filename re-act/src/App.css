@@ -1,21 +1,35 @@
 .main-comp{
-  position: relative;
+  height: 100vh;
+  margin: 0;
+  width: 100vw;
   box-sizing: border-box;
-  height: 100%;
+  position: relative;
 }
-
+.all{
+  /* height: 100vh;
+  margin: 0;
+  width: 100vw;
+  box-sizing: border-box;
+  position: relative; */
+}
 .flex {
   display:flex;
   justify-content: space-between;
 }
 
-.Cont {
-  /* max-width: 1000px;
-  margin: 2rem auto;
-  padding: 2rem; */
+.Cont-border {
   margin: 5vw 10vw;
   padding: 5vw;
   border: rgb(53, 53, 53) 1px solid ;
+  height: auto;
+  position:relative;
+}
+.Cont {
+  margin: 5vw 10vw;
+  padding: 5vw;
+  border: rgba(53, 53, 53, 0) 1px solid ;
+  height: auto;
+  position:relative;
 }
 
 .logo{
@@ -26,23 +40,89 @@
 .logo:before{
   content: "";
   position: absolute;
-  background-color: rgb(185, 14, 14);
+  background-color: rgba(185, 14, 14, 0.904);
   left: 0.04em;
   top: 0.17em;
   width: 1.25em;
   height: 0.22em;
 }
 .nav{
-  margin-right: 2vw;
+  margin-right: 1.5em;
+}
+.nav span{
+  cursor: pointer;
+}
+.nav-menu{
+  position: fixed;
+  color: rgb(31, 24, 24);
+  top: 2.33em;
+  right: 0;
+  background-color: rgb(255, 255, 255);
+  width: 500px;
+  height: 100%;
+  z-index: 50;
+
+}
+.nav-menu .nohead{
+  margin: 0;
+  padding: 0;
+  padding-left: 2em;
+}
+.nav-menu .head{
+  border-bottom: rgba(66, 68, 83, 0.534) 2px solid;
+  color: black;
+  padding-bottom: 1em;
+  padding-top: 1.5em;
+  margin-top: 0;
+  margin-bottom: 0;
+  box-shadow: 0px 1px 12px gray;
+  width: 100%;
+}
+
+.nav-menu li{
+  list-style: none;
+  padding: 1em 0.5em 1em 0.5em;
+  border-bottom: rgba(66, 68, 83, 0.534) 2px solid;
+  color: rgb(41, 41, 209);
+ 
+}
+.lnk{
+  text-decoration: none;
+}
+@media only screen and (max-width: 600px){
+  .nav-menu{
+    color: rgb(31, 24, 24);
+    position: fixed;
+    top: 2.33em;
+    right: 0;
+    background-color: rgb(255, 255, 255);
+    padding: 0;
+    width: 80%;
+    height: 100%;
+    z-index: 50;
+  }
+  
+}
+.menu-mask{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 2.4em;
+  right: 0;
+  z-index: 40;
+  background-color: rgba(0, 0, 0, 0.774);
 }
 .app-header{
   font-weight: bold;
   border-bottom: 2px solid rgb(26, 5, 5);
   padding: 1rem;
-  background-color: rgba(6, 9, 39, 0.609);
+  background-color: rgb(66, 68, 83);
   color: white;
   margin-top: 0;
   width: 100%;
+}
+.app-header .logo {
+  margin-left: 0.5em;
 }
 
 .foot{
@@ -50,12 +130,12 @@
   padding: 1rem;
   font-weight: bold;
   position: absolute;
-  background-color: rgba(6, 9, 39, 0.609);
+  background-color: rgb(66, 68, 83);
   color: white;
   margin: 0;
   bottom: 0;
   width: 100%;
   display: grid;
   place-content: center;
-  
+  z-index: 100;
 }

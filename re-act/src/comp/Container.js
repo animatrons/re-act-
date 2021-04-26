@@ -1,14 +1,16 @@
 
-import Navigation from './Navigation';
 import Hello from './Hello';
-
+import About from '../Views/About';
+import Home from '../Views/Home';
 
 function Container(props) {
+    if ( props.page == 'home')
     return (
-        <div className="Cont">
-            <Hello name="Man"/>
-        {/* <Counter></Counter> */}
-        </div>
+        <Home></Home>
+    )
+    if (props.page == 'about')
+    return ( 
+        <About></About>
     )
 }
 
