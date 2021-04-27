@@ -1,5 +1,5 @@
 .main-comp{
-  height: 100vh;
+  min-height: 100vh;
   margin: 0;
   width: 100vw;
   box-sizing: border-box;
@@ -25,13 +25,82 @@
   position:relative;
 }
 .Cont {
-  margin: 5vw 10vw;
-  padding: 5vw;
+  margin: 5vw 15vw;
+  padding: 0 5vw;
   border: rgba(53, 53, 53, 0) 1px solid ;
   height: auto;
   position:relative;
 }
-
+.Cont.prod {
+  border-bottom: rgb(53, 53, 53) 1px solid ;
+}
+.Cont.products{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 5rem;
+}
+.single-product{
+  padding: 0;
+  border: 1px gray solid;
+  max-width: 500px;
+  margin-bottom: 50px;
+}
+.single-product :first-child{
+  width: 100%;
+}
+.single-product h2{
+  padding-left: 1em;
+  margin-bottom: 0;
+}
+.single-product .desc-price{
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  padding: 0.8em 1em;
+}
+.single-product .desc-price :nth-child(1){
+  font-size: 0.8rem;
+}
+.single-product .desc-price :nth-child(2){
+  font-size: 1.2rem;
+  font-weight: 900;
+  display: grid;
+  place-items: center;
+  border-left: 1px gray solid;
+}
+.Cont.home {
+  margin-top: 20px;
+}
+.Cont-border.home {
+  margin-bottom: 20px;
+}
+.Cont.home p{
+  font-size: 1.25em;
+}
+.Cont.home :nth-child(3){
+  display: grid;
+  place-content: center;
+  height: 100px;
+  padding-bottom: 2.5rem;
+}
+.Cont.home p span{
+  padding: 0.40em 2em;
+  background-color: rgb(66, 68, 83);
+  font-weight: 600;
+  color: white;
+  border-style: none;
+  border: rgba(46, 43, 43, 0.294) 1px solid;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.Cont.home p span:hover{
+  background-color: rgba(66, 68, 83, 0.692);
+}
+.Cont.home p span .lnk{
+  text-decoration: none;
+  color: white;
+}
 .logo{
   position: relative;
   display: inline-block;
@@ -101,7 +170,9 @@
     height: 100%;
     z-index: 50;
   }
-  
+  body {
+    overflow-y: scroll;
+  }
 }
 .menu-mask{
   position: fixed;

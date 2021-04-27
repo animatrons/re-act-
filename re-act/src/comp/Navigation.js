@@ -66,6 +66,11 @@ function Navigation(){
                                 </Link>
                             </li>
                             <li>
+                                <Link to="/products" className="lnk" onClick={()=>setShowMenu(false)}>
+                                    Products
+                                </Link>
+                            </li>
+                            <li>
                                 <Link to="/about" className="lnk" onClick={()=>setShowMenu(false)}>
                                     About
                                 </Link>

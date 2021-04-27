@@ -30,6 +30,9 @@ function App() {
           <Route exact path="/">
             <Container page='home'></Container>
           </Route>
+          <Route path="/products">
+            <Container page='products'></Container>
+          </Route>
           <Route path="/about">
             <Container page='about'></Container>
           </Route>
