@@ -1,5 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Suspense  } from 'react';
 import axios from 'axios';
+import logo from '../logo.svg';
+
 
 function Product(props) {
     const url = "https://60882528a6f4a30017425cc1.mockapi.io/api/pr/products/" + props.id;
@@ -16,10 +18,12 @@ function Product(props) {
         return (
             <div className="single-product">
                 <div >
-                    <img
-                        src={product.images[0].imageUrl}
-                        alt={product.name}
-                    />
+                    
+                        <img
+                            src={product.images[0].imageUrl}
+                            alt={product.name}
+                        />
+                    
                 </div>
                 <h2>{product.name}</h2>
                 <div className="desc-price">
@@ -28,6 +32,29 @@ function Product(props) {
                     </div>
                     <div>
                         $ {product.price}
+                    </div>
+                </div>
+            </div>
+        )
+    }
+    if (product & props.id == 0){
+        return (
+            <div className="single-product">
+                <div >
+                    
+                        <img
+                            src={logo}
+                            alt="nothing"
+                        />
+                    
+                </div>
+                <h2>{product.name}</h2>
+                <div className="desc-price">
+                    <div>
+                        ...
+                    </div>
+                    <div>
+                        $ ...
                     </div>
                 </div>
             </div>

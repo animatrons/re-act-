@@ -32,9 +32,52 @@
   position:relative;
 }
 .Cont.prod {
+  display: flex;
+  justify-content: space-between;
   border-bottom: rgb(53, 53, 53) 1px solid ;
 }
-.Cont.products{
+.Cont.prod h2 {
+  position: relative;
+  width: 100px;
+}
+.Cont.prod h2 *{
+  position: absolute;
+  bottom: 17%;
+}
+.Cont.prod h2 :first-child{
+  right: 0;
+}
+.litIcon {
+  color: deepskyblue;
+}
+.darkIcon {
+  color: gray;
+}
+#grid-icon{
+  /* color: gray; */
+  cursor: pointer;
+  height: 25px;
+  width:25px;
+}
+#grid-icon path{
+  pointer-events: none;
+}
+#list-icon path{
+  pointer-events: none;
+}
+#list-icon{
+  /* color: gray; */
+  cursor: pointer;
+  height: 25px;
+  width:25px;
+}
+
+#empty{
+  color: yellowgreen;
+}
+
+
+.Cont.products-flex{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -193,7 +236,7 @@
   width: 100%;
 }
 .app-header .logo {
-  margin-left: 0.5em;
+  margin-left: 2em;
 }
 
 .foot{
