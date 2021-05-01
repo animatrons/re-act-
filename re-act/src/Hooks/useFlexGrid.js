@@ -8,7 +8,8 @@ export const useFlexGrid = initialValues => {
         e => {
             setValues({
                 pastId: values.thisId,
-                thisId: e.target.id
+                thisId: e.target.id,
+               
             });
         }
     ]

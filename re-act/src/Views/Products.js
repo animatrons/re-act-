@@ -6,11 +6,22 @@ import { useFlexGrid } from '../Hooks/useFlexGrid';
 
 function Products() {
     const [values, setCurrentId] = useFlexGrid({pastId: 'empty', thisId: 'list-icon'});
+    const [layout, setLayout] = useState('list');
     // var intervalId = setInterval(()=>{
     //     if ()
     // }, 100)
     // console.log(values.pastId);
     // console.log(values.pastId);
+    useEffect(()=>{
+        if(values.thisId === 'list-icon') {
+            document.getElementById("products").classList.remove('products-grid');
+            document.getElementById("products").classList.add('products-flex');
+        }
+        else {
+            document.getElementById("products").classList.remove('products-flex');
+            document.getElementById("products").classList.add('products-grid');
+        }
+    }, [values.thisId])
         return (
             <div>
                 <div className="Cont prod">
@@ -21,6 +32,7 @@ function Products() {
                                 id="grid-icon" 
                                 onClick = {setCurrentId} 
                                 className='darkIcon'   
+                                name="grid"
                                 icon={faTh}/>
                         </div>
                         <div>
@@ -28,12 +40,13 @@ function Products() {
                                 id="list-icon" 
                                 onClick = {setCurrentId} 
                                 className='darkIcon'  
+                                name="list"
                                 icon={faThList}/>
                         </div>
                     </h2>
                 </div>
                 
-                <div className="Cont products-flex">
+                <div id="products" className="Cont products-grid">
                         <Product id="1"></Product>    
                         <Product id="2"></Product>
                         <Product id="3"></Product>
@@ -47,7 +60,7 @@ function Products() {
                     document.getElementById(values.thisId).classList.remove('darkIcon');
                     document.getElementById(values.thisId).classList.add('litIcon');
                 }, 0)}
-                <div className="" id="empty">dsqsdqsdsqdqsf</div>
+                <div className="" id="empty"></div>
             </div>
         )
    

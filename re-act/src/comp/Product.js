@@ -17,20 +17,21 @@ function Product(props) {
     if (product) {
         return (
             <div className="single-product">
-                <div >
+                <div className="img-wrap">
                     
                         <img
+                            className="img"
                             src={product.images[0].imageUrl}
                             alt={product.name}
                         />
                     
                 </div>
-                <h2>{product.name}</h2>
+                <h2 className="product-name">{product.name}</h2>
                 <div className="desc-price">
-                    <div>
+                    <div className="desc">
                         {product.description}
                     </div>
-                    <div>
+                    <div className="price">
                         $ {product.price}
                     </div>
                 </div>
