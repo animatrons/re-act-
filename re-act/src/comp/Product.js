@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Suspense  } from 'react';
+import React, { useState, useEffect  } from 'react';
 import axios from 'axios';
 import logo from '../logo.svg';
 
@@ -38,7 +38,7 @@ function Product(props) {
             </div>
         )
     }
-    if (product & props.id == 0){
+    if (product & props.id === 0){
         return (
             <div className="single-product">
                 <div >

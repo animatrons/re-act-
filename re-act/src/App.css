@@ -5,13 +5,6 @@
   box-sizing: border-box;
   position: relative;
 }
-.all{
-  /* height: 100vh;
-  margin: 0;
-  width: 100vw;
-  box-sizing: border-box;
-  position: relative; */
-}
 .flex {
   display:flex;
   justify-content: space-between;
